@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgba(2, 202, 2, 0.603);
+            color: white;
+            text-shadow: 0px 2px 5px black;
+        }
+
+        .botao {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcula Troco</h1>
+    <div>
+        <input type="button" value="Comprar Produto" onclick="calcular()" class="botao">
+    </div>
+    <h2>Desafio OK</h2>
+    <script>
+        function calcular() {
+            let prod = window.prompt('Que produto está comprando?')
+            let valor = window.prompt(`Quanto custa ${prod} que você está comprando?`)
+            let pago = window.prompt(`Qual foi o valor que você deu para pagar o ${prod}?`)
+            let troco = pago - valor
+            window.prompt(` Você comprou ${prod} por R$${valor}. Você deu R$${pago} em dinehiro e vai receber R$${troco} de troco. Volte sempre!`)
+        }
+
+    </script>
+</body>
+</html>
